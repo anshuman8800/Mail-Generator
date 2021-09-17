@@ -1,7 +1,8 @@
 import smtplib
 import csv
-password = '****'
-mailID = 'anshuman8800@gmail.com'
+
+password = "****"
+mailID = "anshuman8800@gmail.com"
 
 
 message = """
@@ -13,12 +14,12 @@ Thanks with Regard
 Anshuman"""
 
 
-s = smtplib.SMTP('smtp.gmail.com', 587)
+s = smtplib.SMTP("smtp.gmail.com", 587)
 s.ehlo()
 
-  
+
 s.starttls()
-s.login(mailID, password)  
+s.login(mailID, password)
 with open("contacts_file.csv") as file:
     reader = csv.reader(file)
     next(reader)  # Skip header row
